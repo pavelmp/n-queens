@@ -1,0 +1,67 @@
+
+    /*
+    if(solution === undefined){
+      if(currentCount === n){
+        solution = currentBoard.rows();
+      } else {
+        board.togglePiece(rowIndex,colIndex);
+        if(board.hasAnyRooksConflicts()){
+          board.togglePiece(rowIndex,colIndex);
+          if(board._isInBounds(rowIndex,colIndex+1)){
+            recursion(board,rowIndex,colIndex+1,currentCount);  
+          } else if(board._isInBounds(rowIndex+1,colIndex)){
+            recursion(board,rowIndex+1,0,currentCount);  
+          }
+        } else {
+          currentCount++;
+  
+          if(board._isInBounds(rowIndex,colIndex+1)){
+            recursion(board,rowIndex,colIndex+1,currentCount);  
+          } else if(board._isInBounds(rowIndex+1,colIndex)){
+            recursion(board,rowIndex+1,0,currentCount);  
+          } else if(currentCount === n){
+            solution = currentBoard.rows();
+          }          
+          board.togglePiece(rowIndex,colIndex);
+        }
+      }  
+    }  
+  };
+*/
+/*
+  var recursion = function(currentBoard,rowIndex,colIndex,currentCount){
+    
+    //Recursion:
+    //Check is there is a solution or currentCount === n
+    //Start at index 0,0
+    //Place rook #1 at 0,0
+        //if conflict, remove rook #1, run recursion at 0,1
+        //else, run recursion at 0,1 and remove hook #1
+
+    if(solution === undefined){
+      if(currentCount === n){
+        solution = currentBoard.rows();
+      } else {
+        board.togglePiece(rowIndex,colIndex);
+        if(!board.hasAnyRooksConflicts()){
+          currentCount++;
+          if(currentCount === n){
+            solution = currentBoard.rows();
+          }
+          if(board._isInBounds(rowIndex,colIndex+1)){
+            recursion(board,rowIndex,colIndex+1,currentCount);  
+          } else if(board._isInBounds(rowIndex+1,colIndex)){
+            recursion(board,rowIndex+1,0,currentCount);  
+          }
+        }
+        
+        board.togglePiece(rowIndex,colIndex);
+        if(board._isInBounds(rowIndex,colIndex+1)){
+          recursion(board,rowIndex,colIndex+1,currentCount);  
+        } else if(board._isInBounds(rowIndex+1,colIndex)){
+          recursion(board,rowIndex+1,0,currentCount);  
+        }
+      }  
+    }  
+  };
+*/
