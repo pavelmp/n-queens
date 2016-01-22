@@ -43,7 +43,7 @@
 
     hasAnyQueenConflictsOn: function(rowIndex, colIndex) {
       return (
-        this.hasRowConflictAt(rowIndex) ||
+        //this.hasRowConflictAt(rowIndex) ||
         this.hasColConflictAt(colIndex) ||
         this.hasMajorDiagonalConflictAt(this._getFirstRowColumnIndexForMajorDiagonalOn(rowIndex, colIndex)) ||
         this.hasMinorDiagonalConflictAt(this._getFirstRowColumnIndexForMinorDiagonalOn(rowIndex, colIndex))
@@ -112,7 +112,7 @@
       //store sum of column
       var sum = 0; 
       for (var i = 0; i < numRows; i++){
-        if(sum>1) {break;}
+        if(sum>1){return true}
         sum += this.get(i)[colIndex];
       }
       return sum > 1;
